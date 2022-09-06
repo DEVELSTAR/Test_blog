@@ -11,3 +11,5 @@
      articles articles.html.erb
 
 5 = article create and new action
+
+6 = article show action
