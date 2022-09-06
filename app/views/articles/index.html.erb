@@ -1,6 +1,24 @@
-<% @articles.each do |article| %>
-  <h1><%= link_to article.title, article %></h1>
-  <h1><%= article.description %></h1>
-  <%= link_to 'Delete', article, data: {turbo_method: :delete} %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.title, article %></td>
+        <td><%= article.description %></td>
+        <td><%= link_to 'Delete', article, data: {turbo_method: :delete} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
+<%= link_to 'Create New Article', new_article_path %>
+
+<% @categories.each do |category| %>
+  <%= category.category %>
 <% end %>

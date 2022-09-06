@@ -1,4 +1,9 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.description %></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h4 class="card-title"><%= @article.title %></h4>
+    <h6 class="card-title"><%= @article.category.category %></h6>
+    <p class="card-text"><%= @article.description %></p>
+    <%= link_to 'Edit', edit_article_path(@article), class:"card-link"%>
+    <%= link_to 'Delete', @article, data: {turbo_method: :delete}, class:"card-link" %>
+  </div>
+</div>

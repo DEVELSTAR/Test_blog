@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+   before_action :set_categories
 
   def show
     @article = Article.find(params[:id])
@@ -44,7 +45,11 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, :category_id )
+  end
+
+  def set_categories
+    @categories = Category.all
   end
 
 end 

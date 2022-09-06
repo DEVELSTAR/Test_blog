@@ -17,3 +17,5 @@
 7 = article edit action
 
 8 = article destroy action
+
+9 = bootstrap, navbar, style, category
