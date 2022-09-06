@@ -1,4 +1,6 @@
 <% @articles.each do |article| %>
   <h1><%= link_to article.title, article %></h1>
   <h1><%= article.description %></h1>
+  <%= link_to 'Delete', article, data: {turbo_method: :delete} %>
+
 <% end %>

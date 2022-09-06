@@ -15,3 +15,5 @@
 6 = article show action
 
 7 = article edit action
+
+8 = article destroy action
