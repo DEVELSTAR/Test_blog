@@ -13,3 +13,5 @@
 5 = article create and new action
 
 6 = article show action
+
+7 = article edit action

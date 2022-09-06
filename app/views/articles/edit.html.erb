@@ -1,0 +1,20 @@
+<h1>Edit Article</h1>
+<%= form_with model: @article, data: { turbo: false }  do |form| %> 
+  <% if @article.errors.any? %>
+   <% @article.errors.full_messages.each do |message| %>
+     <p><%= message %></p>
+   <% end %>
+  <% end %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description, size: "60x10" %>
+  </div>
+
+
+	<%= form.submit %>
+<% end %>
